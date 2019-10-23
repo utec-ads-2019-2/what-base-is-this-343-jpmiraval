@@ -4,12 +4,7 @@
 using namespace std;
 
 bool esNumero(char x){
-    char numeros[10] = {'0','1','2','3','4','5','6','7','8','9'};
-    for(char c : numeros)
-        if (x == c){
-            return true;
-        }
-    return false;
+    return isdigit(x) != 0;
 }
 
 int ctn(char x){
@@ -39,25 +34,25 @@ int minBase(const string& number){
     return ctn(maxChar) + 1;
 }
 
-void searchComonBase(const string& x, const string& y){
-    int xBase = minBase(x);
-    int yBase = minBase(y);
+void BaseComun(const string& num1, const string& num2){
+    int xBase = minBase(num1);
+    int yBase = minBase(num2);
     for(int i = xBase; i<=36; i++){
-        for(int j = yBase; j<=36; j++){
-            if(base10(x, i) == base10(y, j)){
-                cout<< x <<" (base "<<i<<") = "<< y <<" (base "<<j<<")\n";
+        for(int k = yBase; k<=36; k++){
+            if(base10(num1, i) == base10(num2, k)){
+                cout<< num1 <<" (base "<<i<<") = "<< num2 <<" (base "<<k<<")\n";
                 return;
             }
         }
     }
-    cout<<x<<" is not equal to "<<y<<" in any base 2..36\n";
+    cout<<num1<<" is not equal to "<<num2<<" in any base 2..36\n";
 }
 
 int main() {
     string num1;
     string num2;
     while(cin>>num1>>num2){
-        searchComonBase(num1, num2);
+        BaseComun(num1, num2);
     }
     return 0;
 }
