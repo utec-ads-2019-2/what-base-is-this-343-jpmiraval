@@ -1,0 +1,3 @@
+C:/Users/HP/CLionProjects/WhichBaseIsThis/cmake-build-debug/CMakeFiles/WhichBaseIsThis.dir
+C:/Users/HP/CLionProjects/WhichBaseIsThis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/HP/CLionProjects/WhichBaseIsThis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
